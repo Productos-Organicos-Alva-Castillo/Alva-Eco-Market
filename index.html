@@ -5,51 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alva Eco Market</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Barra de navegación -->
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <h1>Alva Eco Market</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Catálogo</a></li>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
             </ul>
+            <h1 class="logo">Alva Eco Market</h1>
         </nav>
     </header>
-
-    <!-- Carrusel de imágenes -->
+    
     <section class="carousel">
-        <div class="carousel-item">
-            <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true" alt="Imagen 1">
-            <div class="carousel-caption">
-                <h2>Productos Orgánicos Alva Castillo</h2>
-                <p>Bienvenidos a nuestro sitio web...</p>
-                <em>Cuidado natural, para una piel radiante y saludable.</em>
+        <div class="slide" style="background-image: url('imagenes/imagen1.jpg');">
+            <div class="text-box">
+                <h2 style="color: #BBA9BB;">Productos Orgánicos Alva Castillo</h2>
+                <p style="color: white;">Nos enorgullece una exclusiva línea de cremas orgánicas 100% naturales...</p>
+                <p><em>Cuidado natural, para una piel radiante y saludable.</em></p>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.10_42ebcdce.jpg?raw=true" alt="Imagen 2">
-            <div class="carousel-caption">
-                <h2>Sobre Nosotros</h2>
-                <p>En Productos Orgánicos Alva Castillo...</p>
+        <div class="slide" style="background-image: url('imagenes/imagen2.jpg');">
+            <div class="text-box">
+                <h2 style="color: #BBA9BB;">Sobre Nosotros</h2>
+                <p style="color: white;">Nuestra misión es brindarte el cuidado más natural y efectivo...</p>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_abeb22bc.jpg?raw=true" alt="Imagen 3">
-            <div class="carousel-caption">
-                <h2>Nuestra Motivación</h2>
-                <p>Creemos que la belleza verdadera...</p>
+        <div class="slide" style="background-image: url('imagenes/imagen3.jpg');">
+            <div class="text-box">
+                <h2 style="color: #BBA9BB;">Nuestra Motivación</h2>
+                <p style="color: white;">Creemos que la belleza verdadera comienza con el cuidado consciente y natural...</p>
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Alva Eco Market</p>
-    </footer>
-
-    <script src="script.js"></script>
+    
+    <section class="info">
+        <h2>❝¿Qué nos diferencia del resto?❞</h2>
+        <p>Cada uno de nuestros productos es formulado cuidadosamente, con ingredientes orgánicos...</p>
+    </section>
+    
+    <section class="mision-vision">
+        <div class="mision">
+            <h3>Misión</h3>
+            <p>Ofrecer productos para el cuidado de la piel elaborados con ingredientes 100% naturales...</p>
+        </div>
+        <div class="vision">
+            <h3>Visión</h3>
+            <p>Ser la marca de referencia en el mercado de productos orgánicos para el cuidado de la piel...</p>
+        </div>
+    </section>
 </body>
 </html>
