@@ -32,17 +32,29 @@
                 padding: 15px;
                 text-align: center;
             }
-            .content img {
+            .carousel {
+                display: flex;
+                overflow: hidden;
                 width: 100%;
                 max-width: 600px;
+                margin: auto;
+                position: relative;
+                white-space: nowrap;
+            }
+            .carousel img {
+                width: 150px;
                 height: auto;
-                margin: 10px 0;
+                margin: 5px;
                 border-radius: 10px;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
                 transition: transform 0.3s ease-in-out;
             }
-            .content img:hover {
-                transform: scale(1.05);
+            .carousel-container {
+                display: flex;
+                animation: scrollImages 10s linear infinite;
+            }
+            @keyframes scrollImages {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
             }
             .nav-menu {
                 display: flex;
@@ -77,15 +89,19 @@
             <a href="#" onclick="redirectTo('contacto.html')">Contacto</a>
         </nav>
         <div class="container">
+            <div class="carousel">
+                <div class="carousel-container">
+                    <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.09_71cc087d.jpg?raw=true" alt="Imagen 1">
+                    <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.10_42ebcdce.jpg?raw=true" alt="Imagen 2">
+                    <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.13_94eb751f.jpg?raw=true" alt="Imagen 3">
+                    <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true" alt="Imagen 4">
+                    <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_abeb22bc.jpg?raw=true" alt="Imagen 5">
+                </div>
+            </div>
             <div class="content">
                 <h2>¿Qué nos diferencia del resto?</h2>
                 <p>Nuestros productos son formulados cuidadosamente con ingredientes orgánicos seleccionados por sus beneficios reales. Nos aseguramos de que nuestras cremas sean libres de químicos y parabenos, respetando el medio ambiente.</p>
                 <p>Creemos que la verdadera belleza proviene del cuidado natural de la piel, ofreciendo productos con resultados visibles y duraderos.</p>
-                <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.09_71cc087d.jpg?raw=true" alt="Imagen 1">
-                <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.10_42ebcdce.jpg?raw=true" alt="Imagen 2">
-                <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.13_94eb751f.jpg?raw=true" alt="Imagen 3">
-                <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true" alt="Imagen 4">
-                <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_abeb22bc.jpg?raw=true" alt="Imagen 5">
             </div>
         </div>
         <div class="footer">
