@@ -1,11 +1,11 @@
-html
-">  AI    Aquí tienes el código HTML completo que cumple con tus requisitos para una página principal como un álbum de imágenes con desplazamiento. El código incluye estilos CSS para el diseño y personalización, y usa JavaScript para la funcionalidad de desplazamiento automático y el menú desplegable. Puedes copiar y pegar este código en tu proyecto:
-html"><title>Alva Eco Market
+```html
+<!DOCTYPE html>
+<html lang=\es\<head>
+<meta charset=\UTF-8\ <meta name=\viewport\ content=\width=device-width, initial-scale=1.0\ <title>Alva Eco Market</title>
+<style>
 body {
-font-family: Arial, sans-serif;
 margin: 0;
-padding: 0;
-background: white;
+font-family: Arial, sans-serif;
 }
 .carousel {
 position: relative;
@@ -13,376 +13,185 @@ overflow: hidden;
 width: 100%;
 height: 100vh;
 }
-.carousel-slide {
-display: flex;
-transition: transform 1s ease-in-out;
-width: 300%; /* Para tres imágenes /
+.carousel img {
+width: 100%;
+height: 100%;
+position: absolute;
+animation: slide 15s infinite;
 }
-.slide {
-width: 100vw; / Cada imagen ocupa toda la ventana */
-height: 100vh;
-background-position: center;
-background-size: cover;
+@keyframes slide {
+0% {transform: translateX(0);}
+20% {transform: translateX(0);}
+25% {transform: translateX(-100%);}
+45% {transform: translateX(-100%);}
+50% {transform: translateX(-200%);}
+70% {transform: translateX(-200%);}
+75% {transform: translateX(-300%);}
+95% {transform: translateX(-300%);}
+100% {transform: translateX(0);}
 }
 .text-overlay {
 position: absolute;
-bottom: 20px;
-left: 20px;
-background: rgba(0, 0, 0, 0.5);
-color: white;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+background-color: rgba(0, 0, 0, 0.5);
 padding: 20px;
-width: calc(100% - 40px);
 }
-h1 {
-font-size: 2.5rem;
+.text-overlay h1 {
 color: #BBA9BB;
-}
-h2 {
 font-size: 2.5rem;
-color: #BBA9BB;
+margin: 0;
 }
-.bold-italic {
+.text-overlay p {
+color: white;
+margin: 10px 0;
+}
+.text-overlay .bold-italic {
 font-weight: bold;
 font-style: italic;
 }
 .navbar {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-background: rgba(230, 157, 251, 0.8);
 display: flex;
 justify-content: space-between;
-padding: 10px;
-transition: background 0.3s;
+align-items: center;
+background-color: rgba(230, 157, 251, 0.9);
+padding: 10px 20px;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 10;
 }
-.navbar h1 {
+.navbar h2 {
 color: white;
-font-size: 1.5rem;
-margin: 0;
+font-size: 1rem;
 }
-.menu {
+.nav-links {
+display: flex;
+}
+.nav-link {
+color: white;
+margin: 0 10px;
+text-decoration: none;
+}
+/* Mobile menu styles */
+.mobile-menu {
 display: none;
 flex-direction: column;
+background-color: rgba(230, 157, 251, 0.9);
 position: absolute;
 top: 50px;
-left: 0;
-background: rgba(230, 157, 251, 0.8);
-width: 100%;
-}
-.menu a {
-color: white;
-padding: 10px;
-text-decoration: none;
-font-size: 1.2rem;
-}
-.menu-toggle {
-display: flex;
-flex-direction: column;
-cursor: pointer;
-}
-.bar {
-height: 4px;
-width: 30px;
-background: white;
-margin: 4px 0;
-}
-section {
-padding: 20px;
-text-align: center;
-}
-.content {
-background: white;
-padding: 20px;
-}
-.dark-background {
-background: #4B3B82;
-padding: 20px;
-color: white;
-}
-.light-box {
-background: #BBA9BB;
-margin: 20px;
-padding: 20px;
-}
-</style><div class="navbar">
-<div class="menu-toggle" id="menuToggle">Alva Eco Market
-InicioCatálogo
-<div class="carousel-slide" id="slide-container">
-<div class="slide" style="background-image: url('https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true');">
-<div class="text-overlay">Productos Orgánicos Alva CastilloBienvenidos a nuestro sitio web, nos enorgullece una exclusiva línea de cremas orgánicas 100% naturales, diseñadas para nutrir, revitalizar y restaurar la salud de tu piel.Cuidado natural, para una piel radiante y saludable.Sobre NosotrosEn Productos Orgánicos Alva Castillo, nuestra misión es brindarte el cuidado más natural y efectivo para tu piel. Somos un equipo apasionado por la belleza saludable y sostenible, comprometidos con ofrecer productos de alta calidad, elaborados con ingredientes 100% orgánicos y amigables con la naturaleza.Nuestra MotivaciónCreemos que la belleza verdadera comienza con el cuidado consciente y natural. Nuestra motivación surge del deseo de ofrecer productos que nutran la piel de manera saludable, sin recurrir a químicos dañinos ni ingredientes artificiales.¿Qué nos diferencia del resto?Cada uno de nuestros productos es formulado cuidadosamente, con ingredientes orgánicos seleccionados por sus beneficios reales. Nos aseguramos de que nuestras cremas sean libres de químicos, parabenos y cualquier sustancia que pueda ser agresiva para tu piel. Además, apoyamos una producción ética y sostenible, utilizando prácticas que respetan el medio ambiente.Creemos que la verdadera belleza proviene de dentro, y que el cuidado de la piel debe ser una experiencia que conecte con la naturaleza. Al elegir Productos Orgánicos Alva Castillo, estás invirtiendo en salud, bienestar y sostenibilidad, con la confianza de que cada producto ha sido creado para ofrecerte resultados visibles y duraderos.MisiónEn Productos Orgánicos Alva Castillo, nuestra misión es ofrecer productos para el cuidado de la piel elaborados con ingredientes 100% naturales y orgánicos, proporcionando soluciones saludables, efectivas y sostenibles. Nos comprometemos a fomentar una belleza libre de químicos agresivos, respetando el equilibrio natural de la piel y promoviendo hábitos de bienestar conscientes.VisiónSer la marca de referencia en el mercado de productos orgánicos para el cuidado de la piel, reconocida por su calidad, ética y compromiso con el bienestar de las personas y del planeta. Aspiramos a inspirar un cambio en la industria de la cosmética, impulsando el uso de ingredientes naturales y promoviendo una belleza auténtica, sostenible y en armonía con la naturaleza.
-let currentSlide = 0;
-const slides = document.getElementById('slide-container').children;
-const totalSlides = slides.length;setInterval(() => {
-slides[currentSlide].style.display = 'none'; // Ocultar la diapositiva actual
-currentSlide = (currentSlide + 1) % totalSlides; // Mover a la siguiente diapositiva
-slides[currentSlide].style.display = 'flex'; // Mostrar la nueva diapositiva
-}, 5000); // Cambiar cada 5 segundosdocument.getElementById('menuToggle').onclick = function() {
-const menu = document.getElementById('menu');
-menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-this.classList.toggle('active');
-};
-</script>  Aquí tienes el código HTML completo que cumple con tus requisitos para una página principal como un álbum de imágenes con desplazamiento. El código incluye estilos CSS para el diseño y personalización, y usa JavaScript para la funcionalidad de desplazamiento automático y el menú desplegable. Puedes copiar y pegar este código en tu proyecto:
-html"><title>Alva Eco Market
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background: white;
-}
-.carousel {
-position: relative;
-overflow: hidden;
-width: 100%;
-height: 100vh;
-}
-.carousel-slide {
-display: flex;
-transition: transform 1s ease-in-out;
-width: 300%; /* Para tres imágenes /
-}
-.slide {
-width: 100vw; / Cada imagen ocupa toda la ventana */
-height: 100vh;
-background-position: center;
-background-size: cover;
-}
-.text-overlay {
-position: absolute;
-bottom: 20px;
 left: 20px;
-background: rgba(0, 0, 0, 0.5);
-color: white;
-padding: 20px;
-width: calc(100% - 40px);
+width: 150px;
+border-radius: 5px;
 }
-h1 {
-font-size: 2.5rem;
-color: #BBA9BB;
-}
-h2 {
-font-size: 2.5rem;
-color: #BBA9BB;
-}
-.bold-italic {
-font-weight: bold;
-font-style: italic;
-}
-.navbar {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-background: rgba(230, 157, 251, 0.8);
-display: flex;
-justify-content: space-between;
+.mobile-menu a {
 padding: 10px;
-transition: background 0.3s;
-}
-.navbar h1 {
 color: white;
-font-size: 1.5rem;
-margin: 0;
-}
-.menu {
-display: none;
-flex-direction: column;
-position: absolute;
-top: 50px;
-left: 0;
-background: rgba(230, 157, 251, 0.8);
-width: 100%;
-}
-.menu a {
-color: white;
-padding: 10px;
 text-decoration: none;
-font-size: 1.2rem;
 }
 .menu-toggle {
-display: flex;
-flex-direction: column;
 cursor: pointer;
-}
-.bar {
-height: 4px;
-width: 30px;
-background: white;
-margin: 4px 0;
-}
-section {
-padding: 20px;
-text-align: center;
-}
-.content {
-background: white;
-padding: 20px;
-}
-.dark-background {
-background: #4B3B82;
-padding: 20px;
-color: white;
-}
-.light-box {
-background: #BBA9BB;
-margin: 20px;
-padding: 20px;
-}
-</style><div class="navbar">
-<div class="menu-toggle" id="menuToggle">Alva Eco Market
-InicioCatálogo
-<div class="carousel-slide" id="slide-container">
-<div class="slide" style="background-image: url('https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true');">
-<div class="text-overlay">Productos Orgánicos Alva CastilloBienvenidos a nuestro sitio web, nos enorgullece una exclusiva línea de cremas orgánicas 100% naturales, diseñadas para nutrir, revitalizar y restaurar la salud de tu piel.Cuidado natural, para una piel radiante y saludable.Sobre NosotrosEn Productos Orgánicos Alva Castillo, nuestra misión es brindarte el cuidado más natural y efectivo para tu piel. Somos un equipo apasionado por la belleza saludable y sostenible, comprometidos con ofrecer productos de alta calidad, elaborados con ingredientes 100% orgánicos y amigables con la naturaleza.Nuestra MotivaciónCreemos que la belleza verdadera comienza con el cuidado consciente y natural. Nuestra motivación surge del deseo de ofrecer productos que nutran la piel de manera saludable, sin recurrir a químicos dañinos ni ingredientes artificiales.¿Qué nos diferencia del resto?Cada uno de nuestros productos es formulado cuidadosamente, con ingredientes orgánicos seleccionados por sus beneficios reales. Nos aseguramos de que nuestras cremas sean libres de químicos, parabenos y cualquier sustancia que pueda ser agresiva para tu piel. Además, apoyamos una producción ética y sostenible, utilizando prácticas que respetan el medio ambiente.Creemos que la verdadera belleza proviene de dentro, y que el cuidado de la piel debe ser una experiencia que conecte con la naturaleza. Al elegir Productos Orgánicos Alva Castillo, estás invirtiendo en salud, bienestar y sostenibilidad, con la confianza de que cada producto ha sido creado para ofrecerte resultados visibles y duraderos.MisiónEn Productos Orgánicos Alva Castillo, nuestra misión es ofrecer productos para el cuidado de la piel elaborados con ingredientes 100% naturales y orgánicos, proporcionando soluciones saludables, efectivas y sostenibles. Nos comprometemos a fomentar una belleza libre de químicos agresivos, respetando el equilibrio natural de la piel y promoviendo hábitos de bienestar conscientes.VisiónSer la marca de referencia en el mercado de productos orgánicos para el cuidado de la piel, reconocida por su calidad, ética y compromiso con el bienestar de las personas y del planeta. Aspiramos a inspirar un cambio en la industria de la cosmética, impulsando el uso de ingredientes naturales y promoviendo una belleza auténtica, sostenible y en armonía con la naturaleza.
-let currentSlide = 0;
-const slides = document.getElementById('slide-container').children;
-const totalSlides = slides.length;setInterval(() => {
-slides[currentSlide].style.display = 'none'; // Ocultar la diapositiva actual
-currentSlide = (currentSlide + 1) % totalSlides; // Mover a la siguiente diapositiva
-slides[currentSlide].style.display = 'flex'; // Mostrar la nueva diapositiva
-}, 5000); // Cambiar cada 5 segundosdocument.getElementById('menuToggle').onclick = function() {
-const menu = document.getElementById('menu');
-menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-this.classList.toggle('active');
-};
-</script>
-<title>Alva Eco Market
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background: white;
-}
-.carousel {
-position: relative;
-overflow: hidden;
-width: 100%;
-height: 100vh;
-}
-.carousel-slide {
-display: flex;
-transition: transform 1s ease-in-out;
-width: 300%; /* Para tres imágenes /
-}
-.slide {
-width: 100vw; / Cada imagen ocupa toda la ventana */
-height: 100vh;
-background-position: center;
-background-size: cover;
-}
-.text-overlay {
-position: absolute;
-bottom: 20px;
-left: 20px;
-background: rgba(0, 0, 0, 0.5);
-color: white;
-padding: 20px;
-width: calc(100% - 40px);
-}
-h1 {
-font-size: 2.5rem;
-color: #BBA9BB;
-}
-h2 {
-font-size: 2.5rem;
-color: #BBA9BB;
-}
-.bold-italic {
-font-weight: bold;
-font-style: italic;
-}
-.navbar {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-background: rgba(230, 157, 251, 0.8);
-display: flex;
-justify-content: space-between;
-padding: 10px;
-transition: background 0.3s;
-}
-.navbar h1 {
 color: white;
 font-size: 1.5rem;
-margin: 0;
 }
-.menu {
-display: none;
-flex-direction: column;
-position: absolute;
-top: 50px;
-left: 0;
-background: rgba(230, 157, 251, 0.8);
-width: 100%;
-}
-.menu a {
-color: white;
-padding: 10px;
-text-decoration: none;
-font-size: 1.2rem;
-}
-.menu-toggle {
-display: flex;
-flex-direction: column;
-cursor: pointer;
-}
-.bar {
-height: 4px;
-width: 30px;
-background: white;
-margin: 4px 0;
-}
-section {
-padding: 20px;
+/* Styles for content section */
+.content {
+padding: 100px 20px;
+background-color: white;
 text-align: center;
 }
-.content {
-background: white;
-padding: 20px;
+.content h2 {
+font-weight: bold;
+font-size: 2rem;
 }
-.dark-background {
-background: #4B3B82;
-padding: 20px;
+.content p {
+text-align: justify;
+color: black;
+}
+.mission-vision {
+background-color: #4B3C60; /* Dark purple */
 color: white;
+padding: 50px 20px;
+text-align: center;
 }
 .light-box {
-background: #BBA9BB;
-margin: 20px;
+background-color: #E69DFB; /* Light purple */
+margin: 20px auto;
 padding: 20px;
+width: 80%;
+border-radius: 5px;
+}
+@media (max-width: 768px) {
+.navbar {
+flex-direction: column;
+align-items: flex-start;
+}
+.nav-links {
+display: none;
+}
+.mobile-menu {
+display: flex;
+}
 }
 </style>
-<div class="navbar">
-<div class="menu-toggle" id="menuToggle">
-Alva Eco Market
-InicioCatálogo
-<div class="carousel-slide" id="slide-container">
-<div class="slide" style="background-image: url('https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true');">
-<div class="text-overlay">
-Productos Orgánicos Alva CastilloBienvenidos a nuestro sitio web, nos enorgullece una exclusiva línea de cremas orgánicas 100% naturales, diseñadas para nutrir, revitalizar y restaurar la salud de tu piel.
-Cuidado natural, para una piel radiante y saludable.
-Sobre Nosotros
-En Productos Orgánicos Alva Castillo, nuestra misión es brindarte el cuidado más natural y efectivo para tu piel. Somos un equipo apasionado por la belleza saludable y sostenible, comprometidos con ofrecer productos de alta calidad, elaborados con ingredientes 100% orgánicos y amigables con la naturaleza.
-Nuestra Motivación
-Creemos que la belleza verdadera comienza con el cuidado consciente y natural. Nuestra motivación surge del deseo de ofrecer productos que nutran la piel de manera saludable, sin recurrir a químicos dañinos ni ingredientes artificiales.
-¿Qué nos diferencia del resto?
-Cada uno de nuestros productos es formulado cuidadosamente, con ingredientes orgánicos seleccionados por sus beneficios reales. Nos aseguramos de que nuestras cremas sean libres de químicos, parabenos y cualquier sustancia que pueda ser agresiva para tu piel. Además, apoyamos una producción ética y sostenible, utilizando prácticas que respetan el medio ambiente.
-Creemos que la verdadera belleza proviene de dentro, y que el cuidado de la piel debe ser una experiencia que conecte con la naturaleza. Al elegir Productos Orgánicos Alva Castillo, estás invirtiendo en salud, bienestar y sostenibilidad, con la confianza de que cada producto ha sido creado para ofrecerte resultados visibles y duraderos.
-Misión
-En Productos Orgánicos Alva Castillo, nuestra misión es ofrecer productos para el cuidado de la piel elaborados con ingredientes 100% naturales y orgánicos, proporcionando soluciones saludables, efectivas y sostenibles. Nos comprometemos a fomentar una belleza libre de químicos agresivos, respetando el equilibrio natural de la piel y promoviendo hábitos de bienestar conscientes.
-Visión
-Ser la marca de referencia en el mercado de productos orgánicos para el cuidado de la piel, reconocida por su calidad, ética y compromiso con el bienestar de las personas y del planeta. Aspiramos a inspirar un cambio en la industria de la cosmética, impulsando el uso de ingredientes naturales y promoviendo una belleza auténtica, sostenible y en armonía con la naturaleza.
-let currentSlide = 0;
-const slides = document.getElementById('slide-container').children;
-const totalSlides = slides.length;
-setInterval(() => {
-slides[currentSlide].style.display = 'none'; // Ocultar la diapositiva actual
-currentSlide = (currentSlide + 1) % totalSlides; // Mover a la siguiente diapositiva
-slides[currentSlide].style.display = 'flex'; // Mostrar la nueva diapositiva
-}, 5000); // Cambiar cada 5 segundos
-document.getElementById('menuToggle').onclick = function() {
-const menu = document.getElementById('menu');
-menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-this.classList.toggle('active');
-};
+</head>
+<body>
+
+<div class=
+avbar\ <div class=\menu-toggle\9776;</div>
+<h2>Alva Eco Market</h2>
+<div class=
+av-links\ <a href=\inicio\ class=
+av-link\Inicio</a>
+<a href=\catalogo\ class=
+av-link\Catálogo</a>
+</div>
+</div>
+
+<div class=\mobile-menu\ <a href=\inicio\Inicio</a>
+<a href=\catalogo\Catálogo</a>
+</div>
+
+<div class=\carousel\ <img src=\https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg\ alt=\Imagen 1\ <div class=\text-overlay\ <h1>Productos Orgánicos Alva Castillo</h1>
+<p>Bienvenidos a nuestro sitio web, nos enorgullece una exclusiva línea de cremas orgánicas 100% naturales, diseñadas para nutrir, revitalizar y restaurar la salud de tu piel.</p>
+<p class=\bold-italic\Cuidado natural, para una piel radiante y saludable.</p>
+</div>
+<img src=\https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.10_42ebcdce.jpg\ alt=\Imagen 2\ <div class=\text-overlay\ style=\animation-delay: 5s;\ <h1>Sobre Nosotros</h1>
+<p>En Productos Orgánicos Alva Castillo, nuestra misión es brindarte el cuidado más natural y efectivo para tu piel. Somos un equipo apasionado por la belleza saludable y sostenible, comprometidos con ofrecer productos de alta calidad, elaborados con ingredientes 100% orgánicos y amigables con la naturaleza.</p>
+</div>
+<img src=\https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_abeb22bc.jpg\ alt=\Imagen 3\ <div class=\text-overlay\ style=\animation-delay: 10s;\ <h1>Nuestra Motivación</h1>
+<p>Creemos que la belleza verdadera comienza con el cuidado consciente y natural. Nuestra motivación surge del deseo de ofrecer productos que nutran la piel de manera saludable, sin recurrir a químicos dañinos ni ingredientes artificiales.</p>
+</div>
+</div>
+
+<div class=\content\ <h2>¿Qué nos diferencia del resto?</h2>
+<p>Cada uno de nuestros productos es formulado cuidadosamente, con ingredientes orgánicos seleccionados por sus beneficios reales. Nos aseguramos de que nuestras cremas sean libres de químicos, parabenos y cualquier sustancia que pueda ser agresiva para tu piel. Además, apoyamos una producción ética y sostenible, utilizando prácticas que respetan el medio ambiente.</p>
+<p>Creemos que la verdadera belleza proviene de dentro, y que el cuidado de la piel debe ser una experiencia que conecte con la naturaleza. Al elegir Productos orgánicos Alva Castillo, estás invirtiendo en salud, bienestar y sostenibilidad, con la confianza de que cada producto ha sido creado para ofrecerte resultados visibles y duraderos.</p>
+</div>
+
+<div class=\mission-vision\ <div class=\light-box\ <h2>Misión</h2>
+<p>En Productos orgánicos Alva Castillo nuestra misión es ofrecer productos para el cuidado de la piel elaborados con ingredientes 100% naturales y orgánicos, proporcionando soluciones saludables, efectivas y sostenibles. Nos comprometemos a fomentar una belleza libre de químicos agresivos, respetando el equilibrio natural de la piel y promoviendo hábitos de bienestar conscientes. A través de nuestras cremas, buscamos ayudar a cada persona a sentirse bien consigo misma, cuidando su piel de manera segura y responsable con el medio ambiente.</p>
+</div>
+<div class=\light-box\ <h2>Visión</h2>
+<p>Ser la marca de referencia en el mercado de productos orgánicos para el cuidado de la piel, reconocida por su calidad, ética y compromiso con el bienestar de las personas y del planeta. Aspiramos a inspirar un cambio en la industria de la cosmética, impulsando el uso de ingredientes naturales y promoviendo una belleza auténtica, sostenible y en armonía con la naturaleza.</p>
+</div>
+</div>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+if (mobileMenu.style.display === 'flex') {
+mobileMenu.style.display = 'none';
+} else {
+mobileMenu.style.display = 'flex';
+}
+});
 </script>
+
+</body>
+</html>
+```
