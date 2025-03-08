@@ -1,92 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos Orgánicos Alva Eco Market</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alva Eco Market</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-around;
+            background-color: #6c4f9c;
+            padding: 10px 0;
+        }
 
-    .barra-superior {
-      background-color: #8a2be2; /* Color lila */
-      padding: 10px;
-      text-align: center;
-      color: white;
-      font-size: 24px;
-    }
+        header img {
+            max-width: 30%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
 
-    .productos-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
+        .contenido {
+            padding: 20px;
+            text-align: center;
+        }
 
-    .producto {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 250px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .productos-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-    .producto:hover {
-      transform: translateX(20px); /* Efecto de movimiento de derecha a izquierda */
-      box-shadow: 0 6px 12px rgba(138, 43, 226, 0.5); /* Sombra lila */
-    }
+        .producto {
+            width: 30%;
+            margin: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #f4f4f4;
+        }
 
-    .producto img {
-      width: 100%;
-      height: auto;
-      border-bottom: 2px solid #8a2be2;
-    }
+        .producto img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
 
-    .producto-info {
-      padding: 15px;
-      text-align: center;
-    }
+        .producto img:hover {
+            transform: scale(1.05);
+        }
 
-    .producto-info h3 {
-      color: #333;
-      font-size: 18px;
-      margin: 0;
-    }
+        .producto-info {
+            padding: 10px;
+        }
 
-    .producto-info p {
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6c4f9c;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="barra-superior">
-    Productos Orgánicos Alva Eco Market
-  </div>
+    <!-- Barra superior con imágenes -->
+    <header>
+        <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_452be4a6.jpg?raw=true" alt="Imagen 1">
+        <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.43.10_42ebcdce.jpg?raw=true" alt="Imagen 2">
+        <img src="https://github.com/Productos-Organicos-Alva-Castillo/Alva-Eco-Market/blob/main/imagenes/Imagen%20de%20WhatsApp%202025-03-06%20a%20las%2018.46.36_abeb22bc.jpg?raw=true" alt="Imagen 3">
+    </header>
 
-  <div class="productos-container">
-    <div class="producto">
-      <img src="imagenes/producto1.jpg" alt="Producto 1">
-      <div class="producto-info">
-        <h3>Producto 1</h3>
-        <p>Descripción del producto.</p>
-      </div>
+    <!-- Contenido de la página -->
+    <div class="contenido">
+        <h1>Bienvenidos a Alva Eco Market</h1>
+        <p>Tu tienda de productos orgánicos de confianza. Disfruta de nuestros productos frescos y naturales, pensados para tu bienestar.</p>
     </div>
-    <div class="producto">
-      <img src="imagenes/producto2.jpg" alt="Producto 2">
-      <div class="producto-info">
-        <h3>Producto 2</h3>
-        <p>Descripción del producto.</p>
-      </div>
+
+    <!-- Productos -->
+    <div class="productos-container">
+        <div class="producto">
+            <img src="https://via.placeholder.com/400x300" alt="Producto 1">
+            <div class="producto-info">
+                <h3>Producto 1</h3>
+                <p>Descripción breve del producto.</p>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="https://via.placeholder.com/400x300" alt="Producto 2">
+            <div class="producto-info">
+                <h3>Producto 2</h3>
+                <p>Descripción breve del producto.</p>
+            </div>
+        </div>
+
+        <div class="producto">
+            <img src="https://via.placeholder.com/400x300" alt="Producto 3">
+            <div class="producto-info">
+                <h3>Producto 3</h3>
+                <p>Descripción breve del producto.</p>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Alva Eco Market. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
